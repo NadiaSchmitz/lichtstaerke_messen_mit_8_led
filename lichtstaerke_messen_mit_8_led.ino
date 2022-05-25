@@ -4,14 +4,9 @@ int led_blue_value;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(leds_blue[0], OUTPUT);
-  pinMode(leds_blue[1], OUTPUT);
-  pinMode(leds_blue[2], OUTPUT);
-  pinMode(leds_blue[3], OUTPUT);
-  pinMode(leds_blue[4], OUTPUT);
-  pinMode(leds_blue[5], OUTPUT);
-  pinMode(leds_blue[6], OUTPUT);
-  pinMode(leds_blue[7], OUTPUT);
+  for (int i = 0; i < 8; i++) {
+    pinMode(leds_blue[i], OUTPUT);
+  }
 }
 
 void loop() {
